@@ -9,7 +9,7 @@ const About = () => {
                     I'm a security-focused systems engineer and AI developer committed to building technical architecture that isn't just "functional," but technically superior. My work focuses on the intersection of offensive security, high-performance distributed systems, and intelligent automation.
                 </p>
                 <p>
-                    Currently, I lead research at <strong>FUTA Research Lab</strong> and develop autonomous security auditors like <strong>Vektor</strong>. Every project I build is an exercise in engineering authority and execution.
+                    Currently, I conduct research at <strong>FUTA Research Lab</strong> and develop autonomous security auditors like <strong>Vektor</strong>. Every project I build is an exercise in engineering authority and execution.
                 </p>
             </div>
         </Section>
