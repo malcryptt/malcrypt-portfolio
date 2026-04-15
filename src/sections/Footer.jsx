@@ -5,24 +5,27 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="container">
-                <div className="footer-top">
-                    <div className="footer-brand">Malcrypt</div>
-                    <nav className="footer-nav">
-                        <a href="#featured">Featured</a>
-                        <a href="#projects">Projects</a>
-                        <a href="#about">About</a>
-                        <a href="#booking">Booking</a>
-                        <a href="#contact">Contact</a>
-                    </nav>
-                </div>
-                <div className="footer-bottom">
-                    <div className="footer-links">
-                        <a href="https://wa.me/2349164703407">WhatsApp</a>
-                        <a href="https://www.instagram.com/devluxe_tech/#">Instagram</a>
-                        <a href="mailto:mal4crypt404@gmail.com">Email</a>
+                <div className="footer-content">
+                    <div className="footer-brand">
+                        <h2 className="brand-name glitch" data-text="Malcrypt">Malcrypt</h2>
+                        <p className="brand-tagline">Secure by design. Engineered for excellence.</p>
                     </div>
-                    <div className="footer-copy">
-                        &copy; {new Date().getFullYear()} Malcrypt. Built for real-world execution.
+
+                    <div className="footer-links">
+                        <div className="social-icons">
+                            <a href="mailto:malcryptt@gmail.com" className="social-icon" aria-label="Email">
+                                <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L12 9.573l8.073-6.08c1.618-1.214 3.927-.059 3.927 1.964z" /></svg>
+                            </a>
+                            <a href="https://instagram.com/malcryp.t" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.012-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.947.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.947 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" /></svg>
+                            </a>
+                            <a href="https://wa.me/2347035544710" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="WhatsApp">
+                                <svg viewBox="0 0 24 24" width="24" height="24"><path fill="currentColor" d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.891 11.891-11.891 3.181 0 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.232 3.48 8.413 0 6.556-5.332 11.892-11.891 11.892-1.999 0-3.956-.503-5.69-1.448l-6.302 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.888-9.886.002-5.447-4.435-9.887-9.888-9.887-5.447 0-9.886 4.438-9.886 9.886 0 2.152.633 4.135 1.871 5.813l-1.013 3.7 3.813-.999zm14.357-7.02c-.14-.232-.51-.37-.58-.417-.37-.185-2.193-1.082-2.532-1.205-.339-.123-.586-.185-.832.185-.246.37-.954 1.205-1.169 1.448-.215.242-.432.274-.798.089-.366-.184-1.543-.568-2.937-1.812-1.083-.965-1.815-2.158-2.027-2.527-.213-.37-.023-.569.162-.751.167-.164.366-.432.55-.647.185-.216.246-.37.369-.617.123-.247.062-.463-.031-.647-.092-.185-.832-2.002-1.141-2.743-.3-.724-.604-.627-.832-.627s-.463-.031-.708-.031c-.246 0-.647.092-.986.463-.339.37-1.294 1.265-1.294 3.085s1.325 3.578 1.51 3.824c.185.247 2.61 3.985 6.32 5.587.882.381 1.571.609 2.108.779.887.281 1.692.241 2.33.145.71-.106 2.193-.895 2.502-1.758.309-.863.309-1.603.216-1.758z" /></svg>
+                            </a>
+                        </div>
+                        <div className="footer-copyright">
+                            © {new Date().getFullYear()} Malcrypt. All rights reserved.
+                        </div>
                     </div>
                 </div>
             </div>

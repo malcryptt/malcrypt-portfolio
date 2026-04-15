@@ -245,19 +245,55 @@ ul {
   pointer-events: none;
 }
 
-/* Technical Details Overlay */
-.tech-metadata {
-  position: absolute;
-  top: var(--spacing-md);
-  right: var(--spacing-md);
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
+/* About Section Enhancements */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.about-bio p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border-subtle);
+  border: 1px solid var(--border-subtle);
+}
+
+.stat-card {
+  background: var(--bg-primary);
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--accent-security);
+  line-height: 1;
+  margin-bottom: var(--spacing-xs);
+}
+
+.stat-text {
+  font-size: 0.7rem;
   color: var(--text-muted);
-  writing-mode: vertical-rl;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  opacity: 0.4;
-  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Enhanced Section Titles */
