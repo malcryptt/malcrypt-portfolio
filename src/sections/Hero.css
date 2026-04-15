@@ -1,0 +1,117 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: var(--spacing-xl) 0;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    filter: saturate(0.5) contrast(1.2);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 30% 50%, transparent 10%, var(--bg-primary) 70%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    max-width: 800px;
+}
+
+
+.hero-title {
+    font-size: clamp(4rem, 12vw, 8rem);
+    line-height: 0.85;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin-bottom: var(--spacing-lg);
+    font-weight: 400;
+    border-left: 2px solid var(--accent-security);
+    padding-left: var(--spacing-md);
+}
+
+/* Sidebar Stats Overlay */
+
+.hero-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.btn {
+    padding: 1.2rem 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.85rem;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+.btn-primary:hover {
+    background: var(--accent-security);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--border-active);
+    color: var(--text-primary);
+    backdrop-filter: blur(5px);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--text-primary);
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-bg {
+        opacity: 0.4;
+    }
+}

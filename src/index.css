@@ -1,0 +1,322 @@
+:root {
+  --bg-primary: #020202;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #141414;
+
+  --text-primary: #ffffff;
+  --text-secondary: #b0b0b0;
+  --text-muted: #505050;
+
+  --accent-security: #ff3333;
+  --accent-websites: #00ff66;
+  --accent-apps: #3399ff;
+  --accent-ai: #a066ff;
+  --accent-frontend: #ff8833;
+
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-active: rgba(255, 255, 255, 0.15);
+  --glass-bg: rgba(10, 10, 10, 0.7);
+
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  /* Adding a mono font for technical feel */
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 8rem;
+
+  --transition-smooth: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Technical Background Pattern */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at 50% 50%, black 20%, transparent 80%);
+}
+
+/* Noise overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border-subtle);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.mono {
+  font-family: var(--font-mono);
+  letter-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Grid Layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.grid {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Common Section Styling */
+.section {
+  padding: var(--spacing-xl) 0;
+}
+
+/* Advanced Cyber Animations */
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes glitch-skew {
+  0% {
+    transform: skew(0deg);
+  }
+
+  20% {
+    transform: skew(1deg);
+  }
+
+  40% {
+    transform: skew(-1deg);
+  }
+
+  60% {
+    transform: skew(2deg);
+  }
+
+  80% {
+    transform: skew(-2deg);
+  }
+
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+.glitch-text:hover {
+  animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+  color: var(--accent-security);
+}
+
+/* Richer Backgrounds */
+.section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.15;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: grayscale(0.5) contrast(1.5);
+  mask-image: radial-gradient(circle at 50% 50%, black 10%, transparent 90%);
+}
+
+.section-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, transparent, var(--bg-primary) 80%);
+  pointer-events: none;
+}
+
+/* Technical Details Overlay */
+.tech-metadata {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  writing-mode: vertical-rl;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* Enhanced Section Titles */
+.section-title {
+  font-size: clamp(3rem, 10vw, 6rem);
+  line-height: 0.9;
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  font-weight: 900;
+  color: var(--text-primary);
+  mix-blend-mode: difference;
+}
+
+.section-title::before {
+  content: attr(data-subtitle);
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--accent-security);
+  letter-spacing: 0.2em;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: var(--text-primary);
+}
+
+/* Scanning Line Animation */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-security), transparent);
+  opacity: 0.1;
+  z-index: 10000;
+  pointer-events: none;
+  animation: scan 8s linear infinite;
+}
+
+@keyframes scan {
+  0% {
+    transform: translateY(-100vh);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
+}

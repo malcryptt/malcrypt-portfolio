@@ -1,0 +1,91 @@
+.project-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--border-subtle);
+    padding: var(--spacing-md);
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background: var(--card-accent);
+    transition: var(--transition-smooth);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--card-accent);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.8),
+        0 0 15px -5px var(--card-accent);
+}
+
+.project-card:hover::before {
+    height: 100%;
+}
+
+.project-name {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+}
+
+.project-description {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.5;
+}
+
+.card-footer {
+    margin-top: auto;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    border: 1px solid var(--card-accent);
+    transition: var(--transition-smooth);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.project-link:hover {
+    background: var(--card-accent);
+    color: var(--bg-primary);
+}
+
+/* Featured Project Styling */
+.project-card.featured {
+    padding: var(--spacing-lg);
+    border: 1px solid var(--card-accent);
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+}
+
+.project-card.featured .project-name {
+    font-size: 3rem;
+    color: var(--card-accent);
+}
+
+@media (max-width: 768px) {
+    .project-card.featured .project-name {
+        font-size: 2rem;
+    }
+}
