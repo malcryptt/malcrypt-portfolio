@@ -9,9 +9,6 @@ const Section = ({ id, title, subtitle, bgImage, className = '', children }) => 
                     <div className="section-overlay"></div>
                 </>
             )}
-            <div className="tech-metadata mono">
-                {id.toUpperCase()}_LOG: 0x{Math.floor(Math.random() * 10000).toString(16)}
-            </div>
             <div className="container">
                 {title && (
                     <h2 className="section-title glitch-text" data-subtitle={subtitle || `SYSTEM/${id.toUpperCase()}`}>

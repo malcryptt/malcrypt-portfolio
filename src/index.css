@@ -310,18 +310,6 @@ ul {
   mix-blend-mode: difference;
 }
 
-.section-title::before {
-  content: attr(data-subtitle);
-  position: absolute;
-  top: -1.5rem;
-  left: 0;
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  font-weight: 400;
-  color: var(--accent-security);
-  letter-spacing: 0.2em;
-}
-
 .section-title::after {
   content: '';
   position: absolute;
