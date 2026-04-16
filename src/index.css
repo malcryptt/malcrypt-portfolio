@@ -358,3 +358,19 @@ body::before {
 .fade-in {
   animation: fadeIn 1s ease-out forwards;
 }
+
+.more-projects-link {
+  margin-top: var(--spacing-lg);
+  text-align: center;
+}
+
+.more-projects-link a {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: underline;
+  transition: var(--transition-smooth);
+}
+
+.more-projects-link a:hover {
+  color: var(--accent-security);
+}

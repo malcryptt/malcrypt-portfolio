@@ -24,7 +24,7 @@ const FeaturedProject = () => {
                         <span>[ SOLANA ]</span>
                         <span>[ LLM_COGNITION ]</span>
                     </div>
-                    <a href="https://github.com/mal4crypt" className="btn btn-primary glitch-text">Explore Vektor</a>
+                    <a href="https://vektor-virid.vercel.app/" target="_blank" rel="noopener noreferrer" className="btn btn-primary glitch-text">Explore Vektor</a>
                 </div>
                 <div className="featured-footer mono">
                     BRIDGING_STATIC_ANALYSIS // HUMAN_AUDITING
