@@ -4,7 +4,7 @@ import './Contact.css';
 
 const Contact = () => {
     return (
-        <Section id="contact" title="Contact">
+        <Section id="contact" title="Contact" type="systems">
             <div className="contact-grid">
                 <div className="contact-item">
                     <label>WhatsApp</label>

@@ -8,6 +8,7 @@ const FeaturedProject = () => {
             id="featured"
             title="Vektor"
             subtitle="FLAGSHIP_PROJECT/SMART_CONTRACT_AUDITOR"
+            type="security"
             className="featured-section"
         >
             <div className="featured-container glass">

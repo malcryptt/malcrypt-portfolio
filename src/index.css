@@ -214,7 +214,6 @@ ul {
 }
 
 .glitch-text:hover {
-  animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
   color: var(--accent-security);
 }
 
@@ -307,8 +306,34 @@ ul {
   letter-spacing: -0.05em;
   font-weight: 900;
   color: var(--text-primary);
-  mix-blend-mode: difference;
+  /* Removed mix-blend-mode to allow specific colors to show clearly */
 }
+
+.section-title.security {
+  color: var(--accent-security);
+}
+
+.section-title.websites {
+  color: var(--accent-websites);
+}
+
+.section-title.apps {
+  color: var(--accent-apps);
+}
+
+.section-title.ai {
+  color: var(--accent-ai);
+}
+
+.section-title.frontend {
+  color: var(--accent-frontend);
+}
+
+.section-title.systems {
+  color: var(--accent-apps);
+}
+
+/* Default systems color */
 
 .section-title::after {
   content: '';

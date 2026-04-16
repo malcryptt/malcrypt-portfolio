@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Section = ({ id, title, subtitle, bgImage, className = '', children }) => {
+const Section = ({ id, title, subtitle, bgImage, type, className = '', children }) => {
     return (
         <section id={id} className={`section ${className}`}>
             {bgImage && (
@@ -11,7 +11,7 @@ const Section = ({ id, title, subtitle, bgImage, className = '', children }) => 
             )}
             <div className="container">
                 {title && (
-                    <h2 className="section-title glitch-text" data-subtitle={subtitle || `SYSTEM/${id.toUpperCase()}`}>
+                    <h2 className={`section-title ${type}`} data-subtitle={subtitle || `SYSTEM/${id.toUpperCase()}`}>
                         {title}
                     </h2>
                 )}

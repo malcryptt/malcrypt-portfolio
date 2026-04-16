@@ -7,6 +7,7 @@ const Projects = () => {
         {
             id: "security",
             title: "Security Tools",
+            type: "security",
             projects: [
                 {
                     name: "Taproot",
@@ -67,6 +68,7 @@ const Projects = () => {
         {
             id: "web-platforms",
             title: "Web Platforms",
+            type: "websites",
             projects: [
                 {
                     name: "ODPay Bill Connect",
@@ -97,6 +99,7 @@ const Projects = () => {
         {
             id: "applications",
             title: "Applications",
+            type: "apps",
             projects: [
                 {
                     name: "Vendora",
@@ -109,6 +112,7 @@ const Projects = () => {
         {
             id: "ai-systems",
             title: "AI Systems",
+            type: "ai",
             projects: [
                 {
                     name: "Malcrypt AI",
@@ -121,6 +125,7 @@ const Projects = () => {
         {
             id: "frontend-lab",
             title: "Frontend Lab",
+            type: "frontend",
             projects: [
                 { name: "Arcland", category: "frontend", description: "Premium UI Experience", link: "https://arcland-six.vercel.app/" },
                 { name: "Cleriq", category: "frontend", description: "Technical Interface Design", link: "https://cleriq.vercel.app/" },
@@ -139,7 +144,7 @@ const Projects = () => {
     return (
         <div id="projects-container">
             {categories.map((cat) => (
-                <Section key={cat.id} id={cat.id} title={cat.title}>
+                <Section key={cat.id} id={cat.id} title={cat.title} type={cat.type}>
                     <div className="project-grid">
                         {cat.projects.map((project, index) => (
                             <ProjectCard key={index} {...project} />
