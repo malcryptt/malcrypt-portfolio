@@ -40,7 +40,7 @@ const Contact = () => {
     ];
 
     return (
-        <Section id="contact" title="Contact" type="systems">
+        <Section id="contact" title="Contact" type="systems" className="contact-section">
             <div className="contact-grid">
                 {socials.map((social) => (
                     <div key={social.id} className="contact-item-wrapper">

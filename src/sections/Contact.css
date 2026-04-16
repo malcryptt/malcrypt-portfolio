@@ -3,7 +3,11 @@
     justify-content: center;
     gap: var(--spacing-lg);
     /* Reduced gap */
-    padding: var(--spacing-lg) 0;
+    padding: var(--spacing-sm) 0;
+}
+
+.contact-section .section-title {
+    margin-bottom: var(--spacing-lg) !important;
 }
 
 .contact-item-wrapper {
