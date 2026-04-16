@@ -1,36 +1,83 @@
 .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--spacing-lg);
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-xl);
+    padding: var(--spacing-xl) 0;
 }
 
-.contact-item label {
-    display: block;
-    font-family: var(--font-heading);
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    margin-bottom: var(--spacing-sm);
+.contact-card {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    border-radius: 50%;
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
 }
 
-.contact-item a {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-primary);
+.contact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: currentColor;
+    opacity: 0;
+    transition: var(--transition-smooth);
+    z-index: 0;
+}
+
+.contact-card:hover::before {
+    opacity: 0.1;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: currentColor;
+    box-shadow: 0 10px 30px -10px currentColor;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    z-index: 1;
     transition: var(--transition-smooth);
 }
 
-.contact-item a:hover {
-    color: var(--text-secondary);
+/* Brand Colors */
+.contact-card.whatsapp {
+    color: #25D366;
 }
 
-.github-links {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-sm);
+.contact-card.instagram {
+    color: #E4405F;
 }
 
-.github-links a {
-    font-size: 1.2rem;
+.contact-card.email {
+    color: #ff3333;
+}
+
+.contact-card:hover .contact-icon {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        gap: var(--spacing-lg);
+    }
+
+    .contact-card {
+        width: 80px;
+        height: 80px;
+    }
+
+    .contact-icon {
+        width: 30px;
+        height: 30px;
+    }
 }

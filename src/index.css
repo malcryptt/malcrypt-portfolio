@@ -305,8 +305,33 @@ ul {
   text-transform: uppercase;
   letter-spacing: -0.05em;
   font-weight: 900;
-  color: var(--text-primary);
-  /* Removed mix-blend-mode to allow specific colors to show clearly */
+  color: #ffffff;
+  /* Default white */
+  transition: color 0.6s ease-in-out;
+}
+
+.section-title.is-active.security {
+  color: var(--accent-security);
+}
+
+.section-title.is-active.websites {
+  color: var(--accent-websites);
+}
+
+.section-title.is-active.apps {
+  color: var(--accent-apps);
+}
+
+.section-title.is-active.ai {
+  color: var(--accent-ai);
+}
+
+.section-title.is-active.frontend {
+  color: var(--accent-frontend);
+}
+
+.section-title.is-active.systems {
+  color: var(--accent-apps);
 }
 
 .section-title.security {
@@ -342,7 +367,101 @@ ul {
   left: 0;
   width: 100px;
   height: 4px;
-  background: var(--text-primary);
+  background: #ffffff;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.section-title.is-active::after {
+  animation: dashSwipe 1.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes dashSwipe {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  40% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  60% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+/* Ensure the dash reappears as a static line after swiping if desired, 
+   but user said "swipe from left to right then disappear and appear in the left then stop while still in view"
+   Let's refine to: swipe, stay. 
+*/
+
+@keyframes dashSwipeFinal {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* The user's specific dash request: 
+   "small white dash under the sections header should like swipe from left to right 
+   then dissappear and appear in the left just as it is in the screenshots 
+   then stop while still in view"
+*/
+
+.section-title.is-active::after {
+  animation: dashRefined 2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+@keyframes dashRefined {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  30% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  60% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  70% {
+    transform: scaleX(0);
+    transform-origin: left;
+    visibility: hidden;
+  }
+
+  100% {
+    transform: scaleX(1);
+    transform-origin: left;
+    visibility: visible;
+  }
 }
 
 /* Scanning Line Animation */

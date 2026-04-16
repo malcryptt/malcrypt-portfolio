@@ -157,7 +157,7 @@ const Projects = () => {
                     )}
                     {cat.id === "frontend-lab" && (
                         <div className="more-projects-link mono">
-                            <a href="https://github.com/malcryptt" target="_blank" rel="noopener noreferrer">VIEW_MORE_FRONTEND_WORK</a>
+                            <a href="https://github.com/mal4crypt" target="_blank" rel="noopener noreferrer">VIEW_MORE_FRONTEND_WORK</a>
                         </div>
                     )}
                 </Section>
