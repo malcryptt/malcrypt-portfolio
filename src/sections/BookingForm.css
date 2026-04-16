@@ -39,7 +39,7 @@
 
 .service-item:hover {
     background: rgba(255, 255, 255, 0.08);
-    border-color: var(--accent-security);
+    border-color: var(--accent-apps);
 }
 
 .service-dot {
@@ -94,14 +94,14 @@
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--accent-security);
+    border-color: var(--accent-apps);
     background: rgba(255, 255, 255, 0.08);
 }
 
 .btn-submit {
     align-self: flex-end;
-    background: #ff4d4d;
-    color: white;
+    background: var(--accent-apps);
+    color: var(--text-primary);
     border: none;
     padding: 1.2rem 3rem;
     font-weight: 700;
@@ -111,7 +111,8 @@
 }
 
 .btn-submit:hover {
-    background: #e60000;
+    background: var(--accent-apps);
+    filter: brightness(1.2);
     transform: translateY(-2px);
 }
 

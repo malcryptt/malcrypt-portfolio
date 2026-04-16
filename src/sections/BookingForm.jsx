@@ -4,11 +4,11 @@ import './BookingForm.css';
 
 const BookingForm = () => {
     const services = [
-        { name: "Security Audit / Red Team", color: "#ff4d4d" },
-        { name: "Website Development", color: "#4dff88" },
-        { name: "App Development", color: "#ff9933" },
-        { name: "AI Engineering", color: "#33ccff" },
-        { name: "Frontend / UI", color: "#a64dff" }
+        { name: "Security Audit / Red Team", color: "var(--accent-security)" },
+        { name: "Website Development", color: "var(--accent-websites)" },
+        { name: "App Development", color: "var(--accent-apps)" },
+        { name: "AI Engineering", color: "var(--accent-ai)" },
+        { name: "Frontend / UI", color: "var(--accent-frontend)" }
     ];
 
     return (
