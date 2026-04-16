@@ -27,7 +27,15 @@ const BookingForm = () => {
                         ))}
                     </ul>
                 </div>
-                <form className="booking-form" onSubmit={(e) => e.preventDefault()}>
+                <form className="booking-form" onSubmit={(e) => {
+                    e.preventDefault();
+                    const name = e.target[0].value;
+                    const email = e.target[1].value;
+                    const service = e.target[2].value;
+                    const details = e.target[3].value;
+                    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0AService: ${service}%0D%0A%0D%0ADetails: ${details}`;
+                    window.location.href = `mailto:abayomimayomikun@gmail.com?subject=Project Inquiry: ${name} - ${service}&body=${body}`;
+                }}>
                     <div className="form-row">
                         <div className="form-group">
                             <label>YOUR NAME</label>

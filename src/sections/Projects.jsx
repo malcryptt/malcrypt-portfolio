@@ -12,7 +12,13 @@ const Projects = () => {
         { name: "Obelisk", category: "security", description: "A high-performance column-oriented analytical query engine built in C++17 with a custom SQL parser, vectorized execution engine (AVX2), and async I/O via io_uring.", link: "https://github.com/mal4crypt" },
         { name: "Genova Health", category: "websites", description: "A healthcare coordination platform connecting patients, doctors, and logistics providers for consultations and medical delivery workflows.", link: "https://github.com/mal4crypt" },
         { name: "Sigil", category: "security", description: "A stateful binary protocol fuzzer and protocol state machine inference engine for reverse engineering, IoT security, and embedded system auditing.", link: "https://github.com/mal4crypt" },
-        { name: "Vektor", category: "security", description: "An AI-powered Solana smart contract security auditor that simulates adversarial reasoning to detect vulnerabilities before deployment.", link: "https://github.com/mal4crypt" },
+        {
+            name: "Vektor",
+            description: "Autonomous Security Auditor for Solana smart contracts.",
+            category: "security",
+            link: "https://github.com/mal4crypt",
+            details: "Vektor is a multi-layered security engine designed to detect logical vulnerabilities in Solana programs. It uses a combination of static analysis and adversarial simulation to identify edge cases that traditional auditors miss. Features include weighted security scoring and educational exploit context."
+        },
         { name: "Casper", category: "security", description: "A network traffic intelligence engine that detects covert channels using machine learning and statistical analysis of traffic metadata.", link: "https://github.com/mal4crypt" }
     ];
 
